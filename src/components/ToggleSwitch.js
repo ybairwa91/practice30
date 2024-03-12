@@ -7,15 +7,17 @@ function ToggleSwitch() {
         height: "50px",
 
     }
-    const [change, setChange] = useState("change")
+    const [isToggled, setIsToggled] = useState(false)
     function handleClick() {
-        setChange(change => !change);
+        setIsToggled(change => !change);
 
     }
+
     return (
         <>
             <input style={style} type='checkbox' onClick={handleClick} />
-            <p>state is: {change ? "change" : "setChange"}</p>
+            <p>state is: {isToggled ? "isToggled" : "setIsToggled"}</p>
+            <p>{isToggled ? 'on' : 'off'}</p>
         </>
 
     )
